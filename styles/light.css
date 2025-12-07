@@ -5,8 +5,42 @@
 */
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --cover-color: url('../images/cover-image-light.png');
+  --color-bg-primary: #FFF1F7;
+  --color-accent: #FF8DCB;
+  --color-accent-text: #353430;
+  --color-accent-transparent: rgba(50, 49, 45, 0.4);
+  --color-text-primary: #353430;
+  --color-text-accent: #FFC2E6;
+  --color-text-dark: #353430;
+  --color-shadow: #FF8DCB;
+  --color-border: #353430;
+  --color-link-hover: #353430;
+  --color-decorate: #353430;
+  --color-shadow-footer:#FF0070;
+}
+
+.theme-light .decorated-element {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --cover-color: url('../images/cover-image-light.png');
+    --color-bg-primary: #FFF1F7;
+    --color-accent: #FF8DCB;
+    --color-accent-text: #353430;
+    --color-accent-transparent: rgba(50, 49, 45, 0.4);
+    --color-text-primary: #353430;
+    --color-text-accent: #FFC2E6;
+    --color-text-dark: #353430;
+    --color-shadow: #FF8DCB;
+    --color-border: #353430;
+    --color-link-hover: #353430;
+    --color-decorate: #353430;
+    --color-shadow-footer:#FF0070;
+  }
+  .decorated-element {
+    display: none;
+  }
 }
