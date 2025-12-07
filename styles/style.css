@@ -2,8 +2,8 @@
 
 .page {
   background-image: var(--cover-color);
-  background-position: center; 
-  background-size: cover; 
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--color-bg-primary);
@@ -40,7 +40,7 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr min-content 1fr; 
+  grid-template-rows: 1fr min-content 1fr;
   min-height: 668px;
   height: 100vh;
   padding-top: 10px;
@@ -195,7 +195,7 @@
   color: var(--color-text-dark);
   font-weight: 700;
   font-family: 'IBM Plex Mono', monospace;
-  margin-bottom: 19px;
+  margin-bottom: 19.2px;
 }
 
 .card {
@@ -203,15 +203,15 @@
   grid-template-columns: 1fr;
 }
 
-.card__content{
+.card__content {
   padding-top: 1px;
 }
 
 .section {
   display: grid;
   gap: 19px;
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .text__width {
@@ -281,7 +281,7 @@
 
 @media (min-width: 768px) {
 
-  .header { 
+  .header {
     padding-inline-start: 0px;
     min-height: 1024px;
     height: 100vh;
@@ -307,7 +307,6 @@
     padding-inline-end: 10px;
   }
 
-
   .no-focus {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -315,7 +314,6 @@
   .focus-content {
     padding-inline-start: 384px;
     padding-inline-end: 10px;
-    padding-top: 16px;
   }
   .main {
     padding-block-start: 58px;
@@ -323,7 +321,6 @@
     padding-inline-start: 10px;
   }
   
-  /* Первая секция: заголовок слева, карточки справа */
   .section:nth-child(1) {
     display: grid;
     grid-template-columns: 32.5% 64.7%;
@@ -342,9 +339,8 @@
     gap: 19px;
   }
   
-  /* Вторая секция: заголовок сверху, карточки под ним */
   .section:nth-child(2) {
-    display: block; /* Возвращаем нормальный поток */
+    display: block;
     padding-bottom: 12px;
   }
   
@@ -360,27 +356,22 @@
     gap: 19px;
   }
   
-  /* ТРЕТЬЯ СЕКЦИЯ: 2 колонки, как первая */
   .section:nth-child(3) {
     display: grid;
     grid-template-columns: 32.4% 64.7%;
     align-items: start;
   }
   
-  /* Заголовок третьей секции в левой колонке */
   .section:nth-child(3) .section__title {
     grid-column: 1;
     grid-row: 1;
     margin-top: 0;
   }
 
-
-  /* Контейнер для карточек в третьей секции */
   .section:nth-child(3) > *:not(.section__title) {
     grid-column: 2;
 }
   
-  /* Заголовок "5 простых советов" в правой колонке */
   .section:nth-child(3) > h3.card__title {
     grid-column: 2;
     margin-top: 0;
@@ -388,7 +379,6 @@
   }
 
   
-   /*Карточки в третьей секции */
   .section:nth-child(3) .card {
     gap: 18.5px;
   }
@@ -477,7 +467,7 @@
     column-gap: 12px;
   }
 
-  .header__theme-menu{
+  .header__theme-menu {
     justify-content: center;
     padding-block-start: 10px;
     padding-inline-start: 22px;
@@ -503,18 +493,17 @@
   .focus-content {
     padding-block-start: 30px;
     padding-inline-start: 513px;
+    padding-top: 15px;
   }
   
-  /* Первая секция: заголовок слева, карточки справа */
   .section:nth-child(1) {
     display: grid;
-    grid-template-columns: 32% 66%; /* изменения*/
+    grid-template-columns: 32% 66%;
     padding-bottom: 30px;
   }
 
-  /* Вторая секция: заголовок сверху, карточки под ним */
   .section:nth-child(2) {
-    display: grid; /* Возвращаем нормальный поток */
+    display: grid;
     padding-bottom: 12px;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -532,19 +521,16 @@
     gap: 19px;
   }
   
-  /* ТРЕТЬЯ СЕКЦИЯ: 2 колонки, как первая */
   .section:nth-child(3) {
     grid-template-columns: 32.1% 65.8%;
   }
   
-  /* Заголовок "5 простых советов" в правой колонке */
   .section:nth-child(3) > h3.card__title {
     grid-column: 2;
     margin-top: 0;
     margin-bottom: 20px;
   }
   
-   /*Карточки в третьей секции */
   .section:nth-child(3) .card {
     gap: 17.6px;
   }
